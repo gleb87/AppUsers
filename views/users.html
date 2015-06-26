@@ -1,0 +1,29 @@
+<table class="table-condensed">
+	<thead>
+		<tr>
+			<th ng-repeat="sortBtn in sortBtns">
+				<a href="{{ sortBtn.url }}" class="{{ sortBtn.class }}">
+					{{ sortBtn.title }}
+					<span class="{{ sortBtn.glyphiconClass }}" aria-hidden="true"></span>
+  					<span class="sr-only">{{ sortBtn.srOnly }}</span>
+				</a>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="user in showUsers">
+			<td>{{ user.user.name.first + " " + user.user.name.last | cfNames }}</td>
+			<td>{{ user.user.email }}</td>
+			<td>{{ user.user.username }}</td>
+			<td>{{ user.user.dob | date }}</td>
+		</tr>
+	</tbody>
+</table>
+
+<ul class="pagination">
+	<li class="{{ prevBtn.class }}"><a href="{{ prevBtn.url }}">Previous</a></li>
+	<li ng-repeat="pageBtn in pagination" class="{{ pageBtn.class }}">
+		<a href="{{ pageBtn.url }}">{{ $index + 1 }}</a>
+	</li>
+	<li class="{{ nextBtn.class }}"><a href="{{ nextBtn.url }}">Next</a></li>
+</ul>

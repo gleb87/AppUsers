@@ -1,0 +1,9 @@
+a.sortedByName:after {
+	/*
+	content:"
+	<span class="open-quote"glyphicon glyphicon-sort-by-alphabet"close-quote" aria-hidden="open-quote"true"close-quote"></span>
+  	<span class="open-quote"sr-only"close-quote">Sort by name reverse</span>
+  	";
+  	*/
+	content:"<span>lala</span>";
+}
